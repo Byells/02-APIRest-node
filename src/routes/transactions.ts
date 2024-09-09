@@ -94,7 +94,7 @@ export async function transactionsRoutes(app: FastifyInstance) {
       id: randomUUID(),
       title,
       amount: type === 'credit' ? amount : amount * -1,
-      session_Id: sessionId,
+      session_id: sessionId,
     })
 
     return reply.status(201).send(' 🥽 Success Dawg')
