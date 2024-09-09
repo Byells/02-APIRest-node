@@ -6,7 +6,7 @@ import { env } from './env'
 app
   .listen({
     port: env.PORT,
-    host: env.HOST,
+    host: 'RENDER' in process.env ? '0.0.0.0' : 'localhost',
   })
   .then(() => {
     console.log('Server is running on port 3034')

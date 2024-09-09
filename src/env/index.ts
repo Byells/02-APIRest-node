@@ -17,7 +17,6 @@ const envSchema = z.object({
   DATABASE_CLIENT: z.enum(['sqlite', 'pg']),
   DATABASE_URL: z.string(),
   PORT: z.coerce.number().default(3034),
-  HOST: z.string(),
 })
 
 const _env = envSchema.safeParse(process.env)
